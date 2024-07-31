@@ -1,1 +1,0 @@
-# Synergia.github.io
