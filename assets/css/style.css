@@ -8,7 +8,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-
 a {
   color: #18d26e;
   transition: 0.5s;
@@ -42,8 +41,11 @@ h6 {
   text-align: start;
   text-decoration: none;
   text-transform: capitalize;
-
 }
+
+/*
+  Button
+*/
 
 .my-button {
   background-color: #1d242b;
@@ -55,6 +57,9 @@ h6 {
   color: #fafafa;
 }
 
+/*
+  Background Section Color Change
+*/
 .color-change {
   background-color: #fff;
 }
@@ -95,7 +100,9 @@ h6 {
   opacity: 1;
 }
 
-/* Prelaoder */
+/* 
+  Prelaoder 
+*/
 #preloader {
   position: fixed;
   top: 0;
@@ -294,8 +301,8 @@ h6 {
   }
 }
 
-/**
-* Mobile Navigation 
+/*
+   Mobile Navigation 
 */
 .mobile-nav-toggle {
   color: #1d242b;
@@ -406,8 +413,9 @@ section {
   overflow: hidden;
 }
 
-/* Sections Header
---------------------------------*/
+/*
+  Sections Header
+*/
 .section-header h3 {
   font-size: 32px;
   color: #1d242b;
@@ -446,8 +454,9 @@ section {
   color: #333;
 }
 
-/* Section with background
---------------------------------*/
+/* 
+  Section with background
+*/
 .section-bg {
   background: #f7f7f7;
 }
@@ -551,7 +560,8 @@ section {
   border-radius: 10px; /* Adds slightly rounded corners */
 }
 
-/* About Us Section
+/*-------------------------------- 
+    #About Us Section
 --------------------------------*/
 #about {
   background-color: #F7F7F7;
@@ -596,7 +606,6 @@ section {
   padding: 20px; /* Adds padding inside the container */
   border-radius: 10px; /* Adds slightly rounded corners */
 }
-
 
 /*-------------------------------- 
     #Services Section
@@ -695,7 +704,6 @@ section {
 #footer .copyright span {
   color: #18d26e;
 }
-
 
 #footer .credits {
   text-align: center;
