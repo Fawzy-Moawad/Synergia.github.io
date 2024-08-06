@@ -43,9 +43,7 @@ h6 {
   text-transform: capitalize;
 }
 
-/*
-  Button
-*/
+/*Button*/
 
 .my-button {
   background-color: #1d242b;
@@ -57,9 +55,13 @@ h6 {
   color: #fafafa;
 }
 
-/*
-  Background Section Color Change
-*/
+.fixed-button {
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+}
+
+/*Section Background Color Change*/
 .color-change {
   background-color: #fff;
 }
@@ -100,9 +102,8 @@ h6 {
   opacity: 1;
 }
 
-/* 
-  Prelaoder 
-*/
+/*Prelaoder*/
+
 #preloader {
   position: fixed;
   top: 0;
@@ -189,9 +190,7 @@ h6 {
 /*--------------------------------------------------------------
     #Navigation Menu
 --------------------------------------------------------------*/
-/*
-   Desktop Navigation 
-*/
+/*Desktop Navigation*/
 .navbar {
   padding: 0;
 }
@@ -301,9 +300,7 @@ h6 {
   }
 }
 
-/*
-   Mobile Navigation 
-*/
+/*Mobile Navigation*/
 .mobile-nav-toggle {
   color: #1d242b;
   font-size: 28px;
@@ -413,9 +410,7 @@ section {
   overflow: hidden;
 }
 
-/*
-  Sections Header
-*/
+/*Sections Header*/
 .section-header h3 {
   font-size: 32px;
   color: #1d242b;
@@ -454,9 +449,7 @@ section {
   color: #333;
 }
 
-/* 
-  Section with background
-*/
+/*Section with background*/
 .section-bg {
   background: #f7f7f7;
 }
@@ -607,6 +600,20 @@ section {
   border-radius: 10px; /* Adds slightly rounded corners */
 }
 
+/*-------------------------------
+    #Main About
+--------------------------------*/
+#main-about {
+  background-color: #F7F7F7;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
+}
+#main-about .section-header h2 {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 600;
+}
 /*-------------------------------- 
     #Services Section
 --------------------------------*/
@@ -695,7 +702,7 @@ section {
 #footer .navbar li a.active span::before {
   background-color: #18d26e; /* Border color on hover, focus, and active */
 }
-
+/*Footer copyright & credits*/
 #footer .copyright {
   text-align: center;
   padding-top: 30px;
