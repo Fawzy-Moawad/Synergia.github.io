@@ -615,10 +615,6 @@ section {
   font-weight: 600;
 }
 
-#main-about .highlight strong {
-  color: #18d26e; /* Change this color to the desired one */
-}
-
 /*-------------------------------- 
     #Services Section
 --------------------------------*/
@@ -647,23 +643,6 @@ section {
 #services .servives-card p {
   font-family: "IBM Plex Sans", "IBM Plex Sans Placeholder", sans-serif;
   font-size: 15px;
-}
-/*--------------------------------
-    #Contact Section
---------------------------------*/
-#contact {
-  background-color: #F7F7F7;
-  padding: 60px 0;
-}
-
-#contact h2 {
-  font-size: 35px;
-  letter-spacing: 0em;
-  line-height: 110%;
-}
-
-#contact p {
-  font-size: 17px;
 }
 
 /*--------------------------------------------------------------
