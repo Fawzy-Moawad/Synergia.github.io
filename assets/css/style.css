@@ -614,6 +614,11 @@ section {
   font-size: 30px;
   font-weight: 600;
 }
+
+#main-about .highlight strong {
+  color: #007bff; /* Change this color to the desired one */
+}
+
 /*-------------------------------- 
     #Services Section
 --------------------------------*/
