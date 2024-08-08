@@ -521,7 +521,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.8);
   z-index: 9;
 }
 
@@ -563,7 +563,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* Adjust this rgba value for different transparency levels */
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust this rgba value for different transparency levels */
   z-index: 1; /* Ensure the overlay is on top of the background image */
 }
 
@@ -606,7 +606,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* Adjust this rgba value for different transparency levels */
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust this rgba value for different transparency levels */
   z-index: 1; /* Ensure the overlay is on top of the background image */
 }
 
@@ -639,10 +639,67 @@ section {
   padding: 60px 0 40px 0;
   position: relative;
 }
+
 #main-about .section-header h2 {
   text-align: left;
   font-size: 30px;
   font-weight: 600;
+}
+
+#main-about .main-about-card-bg-1,
+#main-about .main-about-card-bg-2,
+#main-about .main-about-card-bg-3 {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+  height: 100%;
+  width: 100%;
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 1px solid #ddd; /* Add a light gray border */
+  border-radius: 10px; /* Add slightly rounded corners */
+  overflow: hidden; /* Ensure the pseudo-element does not overflow the container */
+}
+
+#main-about .main-about-card-bg-1 {
+  background-image: url('../img/07.png'); /* Replace with the correct path to your image */
+}
+
+#main-about .main-about-card-bg-2 {
+  background-image: url('../img/08.png'); /* Replace with the correct path to your image */
+}
+
+#main-about .main-about-card-bg-3 {
+  background-image: url('../img/09.png'); /* Replace with the correct path to your image */
+}
+
+#main-about .main-about-card-bg-1::before,
+#main-about .main-about-card-bg-2::before,
+#main-about .main-about-card-bg-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust this rgba value for different transparency levels */
+  z-index: 1; /* Ensure the overlay is on top of the background image */
+}
+
+#main-about .main-about-card h6,
+#main-about .main-about-card p {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+  color: #000; /* Set the text color to black */
+}
+
+#main-about .main-about-card h6 {
+  font-family: "IBM Plex Sans", "IBM Plex Sans Placeholder", sans-serif;
+  font-size: 20px;
+}
+
+#main-about .main-about-card p {
+  font-family: "IBM Plex Sans", "IBM Plex Sans Placeholder", sans-serif;
+  font-size: 15px;
 }
 
 /*-------------------------------- 
@@ -654,68 +711,35 @@ section {
   padding: 60px 0 40px 0;
 }
 
-#services::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.92);
-  z-index: 9;
-}
-
-#services header .row h2 {
-  font-family: "Playfair Display", "Playfair Display Placeholder", serif;
-  text-align: left;
-  font-size: 30px;
-  font-weight: 600;
-}
-
-#services .service-card-bg-1 {
-  height: 100%;
-  width: 100%;
-  background-image: url('../img/03.png'); /* Replace with the path to your image */
-  background-size: cover; /* Ensure the background image covers the entire div */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  background-position: center; /* Center the background image */
-  border: 1px solid #ddd; /* Add a light gray border */
-  border-radius: 10px; /* Add slightly rounded corners */
-}
-
-#services .service-card-bg-2 {
-  height: 100%;
-  width: 100%;
-  background-image: url('../img/04.png'); /* Replace with the path to your image */
-  background-size: cover; /* Ensure the background image covers the entire div */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  background-position: center; /* Center the background image */
-  border: 1px solid #ddd; /* Add a light gray border */
-  border-radius: 10px; /* Add slightly rounded corners */
-}
-
-#services .service-card-bg-3 {
-  height: 100%;
-  width: 100%;
-  background-image: url('../img/05.png'); /* Replace with the path to your image */
-  background-size: cover; /* Ensure the background image covers the entire div */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  background-position: center; /* Center the background image */
-  border: 1px solid #ddd; /* Add a light gray border */
-  border-radius: 10px; /* Add slightly rounded corners */
-}
-
+#services .service-card-bg-1,
+#services .service-card-bg-2,
+#services .service-card-bg-3,
 #services .service-card-bg-4 {
   position: relative; /* Ensure the pseudo-element is positioned relative to this container */
   height: 100%;
   width: 100%;
-  background-image: url('../img/06.png'); /* Replace with the path to your image */
   background-size: cover; /* Ensure the background image covers the entire div */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
   background-position: center; /* Center the background image */
   border: 1px solid #ddd; /* Add a light gray border */
   border-radius: 10px; /* Add slightly rounded corners */
   overflow: hidden; /* Ensure the pseudo-element does not overflow the container */
+}
+
+#services .service-card-bg-1 {
+  background-image: url('../img/03.png'); /* Replace with the path to your image */
+}
+
+#services .service-card-bg-2 {
+  background-image: url('../img/04.png'); /* Replace with the path to your image */
+}
+
+#services .service-card-bg-3 {
+  background-image: url('../img/05.png'); /* Replace with the path to your image */
+}
+
+#services .service-card-bg-4 {
+  background-image: url('../img/06.png'); /* Replace with the path to your image */
 }
 
 #services .service-card-bg-1::before,
@@ -728,18 +752,16 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* Adjust this rgba value for different transparency levels */
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust this rgba value for different transparency levels */
   z-index: 1; /* Ensure the overlay is on top of the background image */
 }
 
-#services .service-card-bg-1,
-#services .service-card-bg-2,
-#services .service-card-bg-3,
-#services .service-card-bg-4 * {
+#services .servives-card h6,
+#services .servives-card p {
   position: relative;
   z-index: 2; /* Ensure the content is above the overlay */
+  color: #000; /* Set the text color to black */
 }
-
 
 #services .servives-card h6 {
   font-family: "IBM Plex Sans", "IBM Plex Sans Placeholder", sans-serif;
