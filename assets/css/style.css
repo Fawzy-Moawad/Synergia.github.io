@@ -542,15 +542,39 @@ section {
   font-weight: 600;
 }
 
+
 #new-hero .new-hero-bg {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
   height: 100%;
   width: 100%;
-  background-size: contain; /* Ensures the image fits within the div */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center; /* Centers the image within the div */
-  border: 1px solid #ddd; /* Adds a light gray border */
-  padding: 20px; /* Adds padding inside the container */
-  border-radius: 10px; /* Adds slightly rounded corners */
+  background-image: url('../img/01.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 1px solid #ddd; /* Add a light gray border */
+  border-radius: 10px; /* Add slightly rounded corners */
+  overflow: hidden; /* Ensure the pseudo-element does not overflow the container */
+}
+
+#new-hero .new-hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust this rgba value for different transparency levels */
+  z-index: 1; /* Ensure the overlay is on top of the background image */
+}
+
+#new-hero .new-hero-bg * {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+}
+
+#new-hero h2, #new-hero p, #new-hero .btn {
+  z-index: 11; /* Ensure the content is above the background image and overlay */
+  position: relative; /* Position the content relative to its normal position */
 }
 
 /*-------------------------------- 
@@ -558,19 +582,37 @@ section {
 --------------------------------*/
 #about {
   background-color: #F7F7F7;
-  background-size: cover;
   padding: 60px 0 40px 0;
   position: relative;
 }
 
-#about::before {
+#about .about-bg {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/02.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 1px solid #ddd; /* Add a light gray border */
+  border-radius: 10px; /* Add slightly rounded corners */
+  overflow: hidden; /* Ensure the pseudo-element does not overflow the container */
+}
+
+#about .about-bg::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
   top: 0;
-  bottom: 0;
-  z-index: 9;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust this rgba value for different transparency levels */
+  z-index: 1; /* Ensure the overlay is on top of the background image */
+}
+
+#about .about-bg * {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
 }
 
 #about .container {
@@ -586,18 +628,6 @@ section {
 
 #about .about-button {
   background-color: #1d242b;
-}
-
-#about .about-bg {
-  background-color: #cccccc;
-  height: 100%;
-  width: 100%;
-  background-size: contain; /* Ensures the image fits within the div */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center; /* Centers the image within the div */
-  border: 1px solid #ddd; /* Adds a light gray border */
-  padding: 20px; /* Adds padding inside the container */
-  border-radius: 10px; /* Adds slightly rounded corners */
 }
 
 /*-------------------------------
@@ -624,6 +654,17 @@ section {
   padding: 60px 0 40px 0;
 }
 
+#services::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 9;
+}
+
 #services header .row h2 {
   font-family: "Playfair Display", "Playfair Display Placeholder", serif;
   text-align: left;
@@ -631,9 +672,74 @@ section {
   font-weight: 600;
 }
 
-#services .servives-card {
-  background-color: #F7F7F7;
+#services .service-card-bg-1 {
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/03.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 1px solid #ddd; /* Add a light gray border */
+  border-radius: 10px; /* Add slightly rounded corners */
 }
+
+#services .service-card-bg-2 {
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/04.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 1px solid #ddd; /* Add a light gray border */
+  border-radius: 10px; /* Add slightly rounded corners */
+}
+
+#services .service-card-bg-3 {
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/05.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 1px solid #ddd; /* Add a light gray border */
+  border-radius: 10px; /* Add slightly rounded corners */
+}
+
+#services .service-card-bg-4 {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/06.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  border: 1px solid #ddd; /* Add a light gray border */
+  border-radius: 10px; /* Add slightly rounded corners */
+  overflow: hidden; /* Ensure the pseudo-element does not overflow the container */
+}
+
+#services .service-card-bg-1::before,
+#services .service-card-bg-2::before,
+#services .service-card-bg-3::before,
+#services .service-card-bg-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust this rgba value for different transparency levels */
+  z-index: 1; /* Ensure the overlay is on top of the background image */
+}
+
+#services .service-card-bg-1,
+#services .service-card-bg-2,
+#services .service-card-bg-3,
+#services .service-card-bg-4 * {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+}
+
 
 #services .servives-card h6 {
   font-family: "IBM Plex Sans", "IBM Plex Sans Placeholder", sans-serif;
